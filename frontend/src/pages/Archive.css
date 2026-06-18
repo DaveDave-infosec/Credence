@@ -1,0 +1,159 @@
+.archive-page {
+  padding: 80px 0;
+}
+
+.archive-header {
+  margin-bottom: 32px;
+}
+
+.archive-title {
+  font-family: var(--font-editorial);
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+  margin: 0 0 12px;
+}
+
+.archive-subtitle {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin: 0 0 32px;
+}
+
+.archive-filters {
+  display: flex;
+  gap: 32px;
+  padding: 24px 0;
+}
+
+.archive-filter-tab {
+  position: relative;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding: 8px 0;
+  transition: color 150ms ease;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.archive-filter-tab:hover {
+  color: var(--bone);
+}
+
+.archive-filter-tab.active {
+  color: var(--bone);
+}
+
+.archive-filter-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+}
+
+.archive-state {
+  padding: 80px 32px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+.archive-state.error {
+  color: var(--verdict-contested);
+}
+
+.archive-state-action {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-top: 24px;
+}
+
+.archive-table th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.archive-table th.align-right,
+.archive-table td.align-right {
+  text-align: right;
+}
+
+.archive-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--bone);
+  vertical-align: middle;
+}
+
+.archive-table tbody tr {
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.archive-table tbody tr:hover {
+  background: var(--charcoal);
+}
+
+.archive-table td.mono {
+  font-family: var(--font-mono);
+  color: var(--bone);
+}
+
+.archive-table td.verdict {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 720px) {
+  .archive-page {
+    padding: 40px 0;
+  }
+  .archive-title {
+    font-size: 36px;
+  }
+  .archive-filters {
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .archive-filter-tab {
+    flex-shrink: 0;
+  }
+  .archive-table {
+    font-size: 11px;
+  }
+  .archive-table th,
+  .archive-table td {
+    padding: 10px 8px;
+  }
+}

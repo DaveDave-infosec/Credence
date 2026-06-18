@@ -1,0 +1,100 @@
+.protocol-selector {
+  padding: 48px 0;
+}
+
+.protocol-selector-label {
+  margin-bottom: 32px;
+}
+
+.protocol-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.protocol-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 24px 16px;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-left: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: border-left-color 200ms ease, padding-left 200ms ease;
+}
+
+.protocol-row:last-child {
+  border-bottom: 0;
+}
+
+.protocol-row:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.protocol-row.selected {
+  border-left-color: var(--accent);
+  padding-left: 24px;
+}
+
+.protocol-radio {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--ghost);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 6px;
+  transition: border-color 200ms ease;
+}
+
+.protocol-row.selected .protocol-radio {
+  border-color: var(--accent);
+}
+
+.protocol-radio-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 200ms ease;
+}
+
+.protocol-row.selected .protocol-radio-dot {
+  background: var(--accent);
+}
+
+.protocol-content {
+  flex: 1;
+}
+
+.protocol-name {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  transition: color 200ms ease;
+  letter-spacing: -0.005em;
+}
+
+.protocol-row.selected .protocol-name {
+  color: var(--bone);
+}
+
+.protocol-description {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.protocol-row:hover:not(:disabled):not(.selected) .protocol-name {
+  color: var(--bone);
+}

@@ -1,0 +1,48 @@
+.credence-analyze {
+  padding: 80px 0;
+}
+
+.analyze-header {
+  margin-bottom: 32px;
+}
+
+.analyze-title {
+  font-family: var(--font-editorial);
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+  margin: 12px 0 16px;
+}
+
+.analyze-subtitle {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.analyze-error {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--verdict-contested);
+  background: rgba(122, 59, 46, 0.1);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--verdict-contested);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .credence-analyze {
+    padding: 40px 0;
+  }
+  .analyze-title {
+    font-size: 36px;
+  }
+}

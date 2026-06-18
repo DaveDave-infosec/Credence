@@ -1,0 +1,108 @@
+.analysis-form {
+  padding: 48px 0;
+}
+
+.analysis-form-label {
+  margin-bottom: 32px;
+  color: var(--muted);
+}
+
+.form-field {
+  margin-bottom: 32px;
+}
+
+.form-field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  background: var(--charcoal);
+  border: 1px solid var(--rule);
+  padding: 14px 16px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--bone);
+  border-radius: 0;
+  transition: border-color 150ms ease;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  outline: 0;
+}
+
+.form-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-textarea-wrapper {
+  position: relative;
+}
+
+.form-textarea {
+  width: 100%;
+  background: var(--charcoal);
+  border: 1px solid var(--rule);
+  padding: 14px 16px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--bone);
+  line-height: 1.6;
+  border-radius: 0;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 150ms ease;
+}
+
+.form-textarea:focus {
+  border-color: var(--accent);
+  outline: 0;
+}
+
+.form-textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-textarea-counter {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--muted);
+  pointer-events: none;
+  background: var(--charcoal);
+  padding: 2px 6px;
+}
+
+.form-field-hint {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+.form-submit {
+  margin-top: 48px;
+}
+
+.btn-institutional:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

@@ -1,0 +1,51 @@
+.credence-footer {
+  border-top: 1px solid var(--rule);
+  padding: 32px 0;
+  margin-top: 80px;
+}
+
+.credence-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  gap: 24px;
+}
+
+.credence-footer-left,
+.credence-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.credence-footer-wordmark {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--bone);
+  letter-spacing: 0.2em;
+}
+
+.credence-footer-sep {
+  color: var(--ghost);
+}
+
+.credence-footer-meta {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 720px) {
+  .credence-footer-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

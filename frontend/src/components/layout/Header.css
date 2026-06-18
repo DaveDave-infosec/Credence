@@ -1,0 +1,152 @@
+.credence-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(12, 12, 13, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.credence-header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 32px;
+}
+
+.credence-wordmark {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--bone);
+  letter-spacing: 0.2em;
+  margin-right: auto;
+}
+
+.credence-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.credence-nav-link {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  transition: color 150ms ease;
+}
+
+.credence-nav-link:hover,
+.credence-nav-link.active {
+  color: var(--bone);
+}
+
+.credence-wallet-wrapper {
+  position: relative;
+}
+
+.credence-wallet-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--bone);
+  letter-spacing: 0.1em;
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.credence-wallet-btn:hover,
+.credence-wallet-btn.open {
+  border-color: var(--muted);
+  background: rgba(244, 241, 236, 0.02);
+}
+
+.credence-wallet-btn.connect {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+.credence-wallet-btn.connect:hover {
+  border-color: var(--accent);
+}
+
+.credence-wallet-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.credence-wallet-caret {
+  margin-left: 6px;
+  font-size: 9px;
+  opacity: 0.6;
+  transition: transform 150ms ease;
+}
+
+.credence-wallet-btn.open .credence-wallet-caret {
+  transform: rotate(180deg);
+}
+
+.credence-wallet-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 180px;
+  background: var(--charcoal);
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+
+.credence-wallet-menu-item {
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--bone);
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.credence-wallet-menu-item:last-child {
+  border-bottom: 0;
+}
+
+.credence-wallet-menu-item:hover {
+  background: var(--slate);
+}
+
+.credence-wallet-menu-item.disconnect:hover {
+  color: var(--verdict-contested);
+}
+
+.credence-header-error {
+  background: var(--verdict-contested);
+  color: var(--bone);
+  padding: 10px 32px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .credence-nav {
+    gap: 16px;
+  }
+  .credence-header-inner {
+    padding: 14px 20px;
+  }
+  .credence-wallet-menu {
+    right: -20px;
+  }
+}
