@@ -22,7 +22,8 @@ contract CredencePayout {
         uint256 amount = owed[msg.sender];
         require(amount > 0, "nothing owed");
         owed[msg.sender] = 0;
-        msg.sender.call{value: amount}("");   // return value ignored
+        (bool ok, ) = msg.sender.call{value: amount}("");
+        require(ok, "payout transfer failed");
     }
 
     receive() external payable {}
